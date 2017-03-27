@@ -1,0 +1,168 @@
+@color: #B5B4B4;
+@carouselwidth: 1000px;
+@carouselheight: 100px;
+@marg:5px;
+
+
+
+html{
+	overflow: hidden;
+}
+
+.container{
+	float: left;
+	width: 58%;
+}
+
+
+#carusel {
+  position:relative;
+  display:inline-block;
+  width: @carouselwidth * 2;
+  height: @carouselheight;
+  padding: 0px; margin: 0px;
+  li{
+	 margin: 5px 2px 0px 0px;
+	 width: 194px;
+	 height:@carouselheight;
+	 float: left;
+	 display: block;
+	}
+
+}
+
+.carusel-container{
+   overflow:hidden;
+   height:@carouselheight; 
+   position: relative; 
+   margin: @marg;
+}
+.car{
+	background-color: darken(@color,20%);
+	p{
+		text-align: left;
+		padding:7px 0px 0px 10px;
+		font-size: 18px;
+		font-weight: bold;
+	}
+	div{
+		text-align: left;
+		padding: @carouselheight - 80 0px 0px 10px;
+
+		span{
+			display:block;
+		}
+	}
+
+}
+.car:hover{
+	background-color: darken(@color,40%);
+}
+
+#btn2{
+	background: rgba(0,0,0,0.3);
+	border:none;
+	position: relative;
+	bottom: @carouselheight;
+	height: @carouselheight;	
+	float: right;
+}
+#btn1:focus,
+#btn2:focus{
+	outline:0;
+}
+
+.user, .tasks{
+	img{
+		float: left;
+	}
+	list-style-type: none;
+	padding:@marg;
+	margin-bottom: 3px;
+}
+
+.user{
+	background-color: lighten(@color,20%);
+
+}
+.sidebars{
+	position: relative;
+	height: 500px;
+	width:20%;
+	background-color: @color;
+	margin: @marg;
+	float: left;
+}
+
+.content{
+    margin: @marg;
+	height: 375px;
+	background-color: lighten(@color,20%);
+	#title{
+		font-size: 20px;
+		font-weight: bold;
+		text-align: left;
+		padding:10px 0 0 10px; 
+		button{
+			margin-left: 58%;
+		}
+
+	}
+	#info,#topic{
+		height: @carouselheight - 15;
+		width: 49.8%;
+		float: left;
+		background-color: red;
+		font-size: 16px;
+		p{
+			margin-left: 5px;
+		}
+	}
+	#topic{
+		float: right;
+	}
+}
+.users,
+.tasks{
+	.sidebars;
+	ul{
+		margin: 0;
+		padding: @marg;
+	}
+}
+.tasks{
+	margin: 0;
+}
+p{
+	padding:0;
+	margin:0;
+
+}
+.name{
+		font-weight: bold;
+}
+
+
+body{
+	margin:0;
+	background-color: @color;
+}
+header{
+	height: 60px;
+	background-color: lighten(black,30%)
+}
+
+.active{
+	background-color: green;
+}
+.active:hover{
+	background-color: green;
+
+}
+
+
+@media screen and (max-width: 1040px) {
+            .container{
+            	width: 56%;
+            }
+}
